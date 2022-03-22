@@ -60,7 +60,18 @@
                     </li>
                 </ul>
             </div>
-
+        </div>
+    </main>
+        <p id="dataaleatoria"></p>
+        <script> 
+            document.getElementById("dataleatoria").innerHTML =  
+            function dataaleatoria(start, end) {
+                new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+            }
+  
+            console.log(randomDate(new Date(2012, 0, 1), new Date()));
+        </script>
+    
 
 </body>
 
