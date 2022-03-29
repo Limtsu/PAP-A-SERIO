@@ -4,6 +4,17 @@
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/slick.css" />
     <title>ForJuda - PAP</title>
+
+    <script>
+        function passvalues() {
+            var titulopostagem=document.getElementById("titulopost").value;
+            localStorage.setItem("textvalue", titulopostagem);
+            var conteudopostagem=document.getElementById("contpostagem").value;
+            localStorage.setItem("textvalue", conteudopostagem);
+            return false;
+        }
+    </script>
+
 </head>
 
 <body>
@@ -15,7 +26,7 @@
                         <img src="./img/logo.png" style="padding: 2.5px;"/>
                     </a>
                 </div>
-                <div class="redes-sociais" style="padding-top: 3px; float: right;" >
+                <div class="redes-sociais" style="padding-top: 3px; float: right; margin-top: 13px;">
                     <ul>
                         <li>
                             <a href="https://www.epnazare.eu/">
@@ -68,23 +79,17 @@
     <php>
         <b> Título da Postagem: </b>
         <br>
-        <input type="text" name="titulo1" style="height:23px; width:500px"><br>
+        <input type="text" name="titulo1" id="titulopost" style="height:23px; width:500px"><br>
         <br>
         <b> Conteúdo da Postagem: </b>
         <br>
-        <input type="text" name="conteudo1" style="height: 308px; width: 986px; margin-bottom: 50px"><br>
+        <input type="text" name="conteudo1" id="contpostagem" style="height: 308px; width: 986px; margin-bottom: 50px"><br>
 
     </php>
     <a href="index.html" class="confirmar botao2"> 
         Criar a postagem
     </a>
-    <p id="conteudopostagem"></p>
     </div>
-    
-
-        
-
-
 
     </main>
 </body>

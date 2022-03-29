@@ -5,6 +5,17 @@
     <link rel="stylesheet" type="text/css" href="./css/slick.css" />
     <script src="scriptregistar.js" defer></script>
     <title>ForJuda - PAP</title>
+
+    <script>
+        function passvalues() {
+            var email=document.getElementById("email").value;
+            localStorage.setItem("textvalue", email);
+            var password=document.getElementById("password").value;
+            localStorage.setItem("textvalue", password);
+            return false;
+        }
+    </script>
+
 </head>
 
 <body>
@@ -16,7 +27,7 @@
                         <img src="./img/logo.png" style="padding: 2.5px;"/>
                     </a>
                 </div>
-                <div class="redes-sociais" style="padding-top: 3px; float: right;" >
+                <div class="redes-sociais" style="padding-top: 3px; float: right; margin-top: 13px;">
                     <ul>
                         <li>
                             <a href="https://www.epnazare.eu/">
@@ -53,7 +64,11 @@
             <label for="password">Palavra Passe</label>
             <input type="password" name="password" id="password">
           </div>
-          <button type="button" data-next>Seguinte</button>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+          </div>
+          <button type="button" data-next onclick="passvalues();">Seguinte</button>
         </div>
         <div class="card" data-step>
           <h3 class="step-title">Este é o passo 2</h3>
